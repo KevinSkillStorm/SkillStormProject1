@@ -6,13 +6,15 @@ import { FlightRoutingModule } from './flight-routing.module';
 import { IndexComponent } from './index/index.component';
 import { CreateComponent } from './create/create.component';
 import { DeleteComponent } from './delete/delete.component';
+import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
   declarations: [
     IndexComponent,
     CreateComponent,
-    DeleteComponent
+    DeleteComponent,
+    UpdateComponent
   ],
   imports: [
     CommonModule,

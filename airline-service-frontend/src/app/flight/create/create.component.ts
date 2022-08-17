@@ -25,6 +25,7 @@ export class CreateComponent implements OnInit {
       arrivalDateTime: new FormControl('', Validators.required),
       departureAirport: new FormControl('', Validators.required),
       arrivalAirport: new FormControl('', Validators.required),
+      maxCapacity: new FormControl('', Validators.required),
     });
   }
 

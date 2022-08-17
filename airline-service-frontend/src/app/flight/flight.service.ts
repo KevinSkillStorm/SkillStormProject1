@@ -42,14 +42,17 @@ export class FlightService {
     return this.http.post<Flight>(this.flightURL, flightDTO);
   }
 
-  // updateSong(song: Flight): Observable<Flight> {
-  //   let url = `${this.musicUrl}/${song.id}`;
-  //   return this.http.put<Flight>(url, song, this.httpOptions);
-  // }
+  updateFlight(id: number, flightDTO: FlightDTO): Observable<Flight> {   
 
-  // deleteSong(id: number): Observable<Flight> {
-  //   return this.http.delete<Flight>(`${this.musicUrl}/${id}`, this.httpOptions);
-  // }
+    let url = `${this.flightURL}/${id}`;
+    return this.http.put<Flight>(url, flightDTO);
+  }
+
+  deleteFlight(id: number): Observable<Flight> {
+    console.log('id = ${id}', id)
+    let url = `${this.flightURL}/${id}`;
+    return this.http.delete<Flight>(url, this.httpOptions);
+  }
 
 
 
