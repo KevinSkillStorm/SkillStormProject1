@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Flights</h1>
+    <a href="#" routerLink="/flight/create/" class="btn btn-success">+ Add a new flight</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Flight Number</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Departure Airport</th>
+                <th>Arrival Airport</th>
+                <th>Max Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let eachFlight of flightsList">
+                <td>{{ eachFlight.id }}</td>
+                <td>{{ eachFlight.flightNumber }}</td>
+                <td>{{ eachFlight.destination }}</td>
+                <td>{{ eachFlight.departureDateTime }}</td>
+                <td>{{ eachFlight.arrivalDateTime }}</td>
+                <td>{{ eachFlight.departureAirport }}</td>
+                <td>{{ eachFlight.arrivalAirport }}</td>
+                <td>{{ eachFlight.maxCapacity }}</td>                
+            </tr>
+        </tbody>
+    </table>
+</div>
