@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-  public newUpdateForm! : FormGroup;
+  public updateForm! : FormGroup;
 
 
 // Retrieving information
@@ -23,7 +23,7 @@ constructor(
 
   ngOnInit(): void {
     this.retrieveFlights();
-    this.newUpdateForm = new FormGroup({
+    this.updateForm = new FormGroup({
       id: new FormControl('', Validators.required),
       flightNumber: new FormControl('', Validators.required),
       destination: new FormControl('', Validators.required),
@@ -39,12 +39,12 @@ constructor(
     this.flightService.getFlights().subscribe(gotFlights => this.flightsList = gotFlights)
   }
 
-  get f() { return this.newUpdateForm.controls; }
+  get f() { return this.updateForm.controls; }
 
   update(id: number){
 
     console.log("update was passsed");
-    this.flightService.updateFlight(id, this.newUpdateForm.value).subscribe((res: any) => { // response object
+    this.flightService.updateFlight(id, this.updateForm.value).subscribe((res: any) => { // response object
       console.log(res);
       this.router.navigateByUrl('flight/index');
     })

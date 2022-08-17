@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlightModule } from './flight/flight.module';
+import { PassengerModule } from './passenger/passenger.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FlightModule } from './flight/flight.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    FlightModule
+    FlightModule,
+    PassengerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
