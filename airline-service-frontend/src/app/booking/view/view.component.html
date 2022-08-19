@@ -1,0 +1,71 @@
+<div class="container">
+    <h1 class="text-center">Passenger Information</h1>
+    <!-- <a href="#" routerLink="/passenger/update/" class="anchorEdit btn btn-success" style="float:center"> Edit a record? </a>
+    <a href="#" routerLink="/passenger/delete/" class="btn btn-danger" style="float:right">- Remove a Passenger</a> -->
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>    
+            
+                <td>{{ passengerData.id }}</td>
+                <td>{{ passengerData.name }}</td>
+                <td>{{ passengerData.job }}</td>
+                <td>{{ passengerData.email }}</td>
+                <td>{{ passengerData.age }}</td>    
+        </tbody>
+    </table>
+    
+</div>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<div class="container">
+    <h1 class="text-center">Flights</h1>
+    <!-- <a href="#" routerLink="/flight/create/" class="btn btn-success">+ Add a new flight</a>
+    <a href="#" routerLink="/flight/update/" class="anchorEdit btn btn-white" style="float:center"> Edit a record? </a>
+    <a href="#" routerLink="/flight/delete/" class="btn btn-danger" style="float:right">- Delete a Flight</a> -->
+    <!-- <button (click)="getFlights()" class="btn btn-primary">Get</button> -->
+    <table class="table table-bordered table-striped" *ngIf="flightData | async ; let flight">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Flight Number</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Departure Airport</th>
+                <th>Arrival Airport</th>
+                <th>Max Capacity</th>
+                <th>Confirmation Number</th>
+            </tr>
+        </thead>
+        <tbody>          
+   
+                <td>{{ flight.id}}</td>
+                <td>{{ flight.flightNumber }}</td>
+                <td>{{ flight.destination }}</td>
+                <td>{{ flight.departureDateTime }}</td>
+                <td>{{ flight.arrivalDateTime }}</td>
+                <td>{{ flight.departureAirport }}</td>
+                <td>{{ flight.arrivalAirport }}</td>
+                <td>{{ flight.maxCapacity }}</td>     
+                <td>{{ bookingData.confirmationNumber}}</td> 
+                    
+        </tbody>
+    </table>
+</div>
+
+<a href="#" routerLink="/passenger/index" class="btn btn-primary">&lt;&lt; Back</a>
+

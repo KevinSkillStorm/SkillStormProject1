@@ -38,7 +38,7 @@ namespace AirlineServiceApplication.Controllers
         // GET: api/Flights/5
         [HttpGet("{id}")]
         // TODO: Why he has detail model to and implemented here
-        public async Task<ActionResult<FlightDetailDTO>> GetFlight(int id)
+        public async Task<ActionResult<Flight>> GetFlight(int id)
         {
           if (_context.Flights == null)
           {
@@ -61,6 +61,7 @@ namespace AirlineServiceApplication.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         // Updates the table
         [HttpPut("{id}")]
+        // TODO: update this httpPUt with DTO
         public async Task<IActionResult> PutFlight(int id, Flight flight)
         {
             if (id != flight.Id)

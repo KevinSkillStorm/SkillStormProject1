@@ -25,17 +25,11 @@ export class FlightService {
   getFlights(): Observable<Flight[]> {
     return this.http.get<Flight[]>(this.flightURL, this.httpOptions);   
   }
-  getFlight(id: number): Observable<Flight[]> {
-    let url = `${this.flightURL}/${id}`;
-    return this.http.get<Flight[]>(url, this.httpOptions);  
-  }
-
-  // getSong(id: number): Observable<Flight> {
-  //   let url = `${this.musicUrl}/${id}`;
-  //   return this.http.get<Flight>(url, this.httpOptions);
-  // }
-
   
+  getFlight(id: number): Observable<Flight> {
+    let url = `${this.flightURL}/${id}`;
+    return this.http.get<Flight>(url, this.httpOptions);  
+  }
 
   // Not sending back connection, so either void or Observable<Flight>
   createFlight(flightDTO: FlightDTO): Observable<Flight> {

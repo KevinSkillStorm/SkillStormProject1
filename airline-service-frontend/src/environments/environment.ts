@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   flightUrl: "https://localhost:7075/api/flights",
   passengerUrl: "https://localhost:7075/api/passengers",
+  bookingURL: "https://localhost:7075/api/bookings"
 };
 
 

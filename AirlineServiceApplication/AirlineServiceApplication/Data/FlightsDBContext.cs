@@ -11,6 +11,7 @@ namespace AirlineServiceApplication.Data
         // Flight 
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
+        public DbSet<Bookings> Bookings { get; set; }
 
         // any advance/complex of mapping to database tables or between models go inside here
         protected override void OnModelCreating(ModelBuilder builder)
@@ -55,5 +56,8 @@ namespace AirlineServiceApplication.Data
             //builder.Entity<Flight>().ToTable("Flight");
             //builder.Entity<Passenger>().ToTable("Passenger");
         }
+
+        // any advance/complex of mapping to database tables or between models go inside here
+        
     }
 }

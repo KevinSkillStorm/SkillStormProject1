@@ -8,6 +8,8 @@ import { Flight } from '../flight';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+
+  
   flightsList: Flight[] = [];
   constructor(private flightService: FlightService) { }
 

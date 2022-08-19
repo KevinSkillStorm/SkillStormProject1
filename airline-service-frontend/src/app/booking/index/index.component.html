@@ -1,0 +1,25 @@
+<div class="container">
+    <a href="#" routerLink="/passenger/index/" class="btn btn-primary" style="float:left">back</a>
+    <a href="#" routerLink="/booking/create/" class="btn btn-success" style="float:right">+ Create a Booking</a>
+    <h1 class="text-center">Table of all Bookings</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Passenger Id</th>
+                <th>Flight Id</th>
+                <th>Confirmation Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let eachBooking of bookingsList">
+                <td>{{ eachBooking.id }}</td>
+                <td>{{ eachBooking.passengerID }}</td>
+                <td>{{ eachBooking.flightID }}</td>
+                <td>{{ eachBooking.confirmationNumber }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

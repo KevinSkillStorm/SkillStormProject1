@@ -1,8 +1,10 @@
 <div class="container">
     <h1>Add new passenger</h1>
     <a href="#" routerLink="/passenger/index" class="btn btn-primary">&lt;&lt; Back</a>
-    <form [formGroup] = "newPassengerForm" (ngSubmit)="submit()">
-        <div> <p></p></div>
+    <form [formGroup]="newPassengerForm" (ngSubmit)="submit()">
+        <div>
+            <p></p>
+        </div>
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" formControlName="name" />
@@ -28,19 +30,15 @@
             <label for="age">Age</label>
             <input type="text" class="form-control" id="age" formControlName="age" />
             <div *ngIf="f['age'].touched && f['age'].invalid" class="alert alert-danger">
-                <div *ngIf="f['emageail'].errors f['age'].errors['required']">Age is required.</div>
+                <div *ngIf="f['age'].errors f['age'].errors['required']">Age is required.</div>
             </div>
         </div>
-        
-        <div> <p></p></div>
+
+        <div>
+            <p></p>
+        </div>
         <button type="submit" class="btn btn-primary" [disabled]="!newPassengerForm.valid">Submit</button>
 
     </form>
-    
+
 </div>
-<!-- 
-<td>{{ eachPassenger.id }}</td>
-<td>{{ eachPassenger.name }}</td>
-<td>{{ eachPassenger.job }}</td>
-<td>{{ eachPassenger.email }}</td>
-<td>{{ eachPassenger.age }}</td>           -->

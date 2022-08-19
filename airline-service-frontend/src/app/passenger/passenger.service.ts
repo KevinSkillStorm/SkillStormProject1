@@ -11,34 +11,27 @@ import { environment } from 'src/environments/environment';
 })
 export class PassengerService {
   private passengerURL = environment.passengerUrl;
- 
+
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
     }),
   };
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getPassengers(): Observable<Passenger[]> {
-    return this.http.get<Passenger[]>(this.passengerURL, this.httpOptions);   
+    return this.http.get<Passenger[]>(this.passengerURL, this.httpOptions);
   }
-  getPassenger(id: number): Observable<Passenger[]> {
+  getPassenger(id: number): Observable<Passenger> {
     let url = `${this.passengerURL}/${id}`;
-    return this.http.get<Passenger[]>(url, this.httpOptions);  
+    return this.http.get<Passenger>(url, this.httpOptions);
   }
-
-  // getSong(id: number): Observable<Flight> {
-  //   let url = `${this.musicUrl}/${id}`;
-  //   return this.http.get<Flight>(url, this.httpOptions);
-  // }
-
-  
 
   // Not sending back connection, so either void or Observable<Flight>
   createPassenger(passengerDTO: PassengerDTO): Observable<Passenger> {
     return this.http.post<Passenger>(this.passengerURL, passengerDTO);
   }
 
-  updatePassenger(id: number, passengerDTO: PassengerDTO): Observable<Passenger> {   
+  updatePassenger(id: number, passengerDTO: PassengerDTO): Observable<Passenger> {
 
     let url = `${this.passengerURL}/${id}`;
     return this.http.put<Passenger>(url, passengerDTO);

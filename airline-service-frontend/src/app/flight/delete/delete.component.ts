@@ -12,9 +12,7 @@ import { BasicGroupByOptions } from 'rxjs';
 })
 export class DeleteComponent implements OnInit {
 
-  public deleteFlightForm!: FormGroup
-
-
+  public deleteFlightForm!: FormGroup;
 
   // Retrieving information
   flightsList: Flight[] = [];

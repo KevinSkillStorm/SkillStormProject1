@@ -15,15 +15,15 @@ public class Passenger
    //public int ConfirmationNumber {get; set;}      
 
   
-    public virtual ICollection<Bookings> BookedFlights { get; set; }
-    //public virtual ICollection<Confirmations> ConfirmationNumber { get; set; }
+    public virtual ICollection<Bookings>? BookedFlights { get; set; }
+    public Passenger() { }
 
     public Passenger(PassengerDTO dto)
     {
         this.Name = dto.Name;
         this.Job = dto.Job;
         this.Email = dto.Email;
-        this.Age = dto.Age;s
+        this.Age = dto.Age;
 
         this.BookedFlights = new List<Bookings>();
     }

@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlightModule } from './flight/flight.module';
 import { PassengerModule } from './passenger/passenger.module';
+import { BookingModule } from './booking/booking.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PassengerModule } from './passenger/passenger.module';
     HttpClientModule,
     FlightModule,
     PassengerModule,
+    BookingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

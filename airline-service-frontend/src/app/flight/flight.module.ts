@@ -7,6 +7,7 @@ import { IndexComponent } from './index/index.component';
 import { CreateComponent } from './create/create.component';
 import { DeleteComponent } from './delete/delete.component';
 import { UpdateComponent } from './update/update.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { UpdateComponent } from './update/update.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    FlightRoutingModule
+    FlightRoutingModule,
+    HttpClientModule
   ]
 })
 export class FlightModule { }

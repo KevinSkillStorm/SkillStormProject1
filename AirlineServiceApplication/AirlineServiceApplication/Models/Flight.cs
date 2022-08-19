@@ -26,13 +26,14 @@ public class Flight
     
 
     // Navigation property
-    public virtual ICollection<Bookings> BookedPassengers { get; set; }
+    public virtual ICollection<Bookings>? BookedPassengers { get; set; }
     //public virtual ICollection<Confirmations> ConfirmationNumberForFlight { get; set; }
 
     // why we use dDTO
     // if trying to post back thorugh web api, we need viertual icolleciton when we post back.
     // if empty array of bookedPassnegersw, best practice for DTO rep data comingi n.
 
+    public Flight(){ }
 
     // TODO: Why do we need flight constructor being overloaded with flightDTO
     public Flight(FlightDTO dto)

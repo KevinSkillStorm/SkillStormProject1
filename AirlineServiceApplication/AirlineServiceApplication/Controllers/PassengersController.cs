@@ -56,6 +56,7 @@ namespace AirlineServiceApplication.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPassenger(int id, Passenger passenger)
         {
+            //var passenger = new Passenger(passengerDTO);
             if (id != passenger.Id)
             {
                 return BadRequest();

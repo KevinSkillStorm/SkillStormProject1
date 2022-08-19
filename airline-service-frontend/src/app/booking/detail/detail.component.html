@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 class="text-center">Flight Detail</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Flight Number</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Departure Airport</th>
+                <th>Arrival Airport</th>
+                <th>Max Capacity</th>
+                <th>Confirmation Number</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <td>{{ flightData.id }}</td>
+            <td>{{ flightData.flightNumber }}</td>
+            <td>{{ flightData.destination }}</td>
+            <td>{{ flightData.departureDateTime }}</td>
+            <td>{{ flightData.arrivalDateTime }}</td>
+            <td>{{ flightData.departureAirport }}</td>
+            <td>{{ flightData.arrivalAirport }}</td>
+            <td>{{ flightData.maxCapacity }}</td>
+
+        </tbody>
+    </table>
+</div>

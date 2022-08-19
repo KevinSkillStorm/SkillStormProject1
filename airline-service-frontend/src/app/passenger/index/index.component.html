@@ -1,29 +1,26 @@
 <div class="container">
     <h1 class="text-center">Passengers</h1>
     <a href="#" routerLink="/passenger/create/" class="btn btn-success">+ Add a new Passenger</a>
-    <a href="#" routerLink="/passenger/update/" class="anchorEdit btn btn-white" style="float:center"> Edit a record? </a>
+    <a href="#" [routerLink]="'/passenger/update/'" class="anchorEdit btn btn-success" style="float:center"> Edit a
+        record? </a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#" routerLink="/passenger/delete/" class="btn btn-danger" style="float:right">- Remove a Passenger</a>
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Job</th>
-                <th>Email</th>
-                <th>Age</th>
-                <th>Confirmation #</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let eachPassenger of passengersList">
                 <td>{{ eachPassenger.id }}</td>
                 <td>{{ eachPassenger.name }}</td>
-                <td>{{ eachPassenger.job }}</td>
-                <td>{{ eachPassenger.email }}</td>
-                <td>{{ eachPassenger.age }}</td>                           
-                <td>{{ eachPassenger.confirmationNumber }}</td>   
+                <td>
+                    <a href="#" [routerLink]="'/booking/view/'+eachPassenger.id" class="btn btn-success">View
+                        Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                </td>
             </tr>
         </tbody>
     </table>
 </div>
-

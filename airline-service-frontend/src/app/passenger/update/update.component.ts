@@ -27,7 +27,6 @@ export class UpdateComponent implements OnInit {
       job: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       age: new FormControl('', Validators.required),
-      confirmationNumber: new FormControl('', Validators.required),
 
     });
   }
@@ -40,7 +39,7 @@ export class UpdateComponent implements OnInit {
 
   update(id: number) {
 
-    console.log("update was passsed");
+    console.log("update was passed");
     this.passengerService.updatePassenger(id, this.updateForm.value).subscribe((res: any) => { // response object
       console.log(res);
       this.router.navigateByUrl('passenger/index');
