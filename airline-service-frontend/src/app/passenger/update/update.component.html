@@ -63,7 +63,7 @@
                 <label for="age">Age</label>
                 <input type="text" class="form-control" id="age" formControlName="age" />
                 <div *ngIf="f['age'].touched && f['age'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['emageail'].errors f['age'].errors['required']">Age is required.</div>
+                    <div *ngIf="f['age'].errors f['age'].errors['required']">Age is required.</div>
                 </div>
             </div>
 

@@ -1,29 +1,29 @@
-<Body>
-    <div class="container">
-        <h1>Booking</h1>
-        <a href="#" routerLink="/passenger/index" class="btn btn-primary">&lt;&lt; Back</a>
-        <p></p>
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Passenger Id</th>
-                    <th>Flight Id</th>
-                    <th>Confirmation Number</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let eachBooking of bookingsList">
-                    <td>{{ eachBooking.id }}</td>
-                    <td>{{ eachBooking.passengerID }}</td>
-                    <td>{{ eachBooking.flightID }}</td>
-                    <td>{{ eachBooking.confirmationNumber }}</td>
+<div class="container">
+    <a href="#" routerLink="/passenger/index/" class="btn btn-primary" style="float:left">back</a>
+    <a href="#" routerLink="/booking/delete/" class="btn btn-danger" style="float:right">- Delete a Booking</a>
+    <a href="#" routerLink="/booking/create/" class="btn btn-success" style="float:right">+ Create a Booking</a>
+    <h1 class="text-center">Table of all Bookings</h1>
 
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Passenger Id</th>
+                <th>Flight Id</th>
+                <th>Confirmation Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let eachBooking of bookingsList">
+                <td>{{ eachBooking.id }}</td>
+                <td>{{ eachBooking.passengerID }}</td>
+                <td>{{ eachBooking.flightID }}</td>
+                <td>{{ eachBooking.confirmationNumber }}</td>
 
+            </tr>
+        </tbody>
+    </table>
+</div>
 
     <div>
         <form [formGroup]="deleteBookingForm">
@@ -39,13 +39,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="name">Input the passenger's name of the row you want to delete</label>
-                <input type="text" class="form-control" id="name" formControlName="name" />
-                <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['name'].errors f['name'].errors['required']">Passenger's name is
+                <label for="confirmationNumber">Input the confirmation number you want to delete</label>
+                <input type="number" class="form-control" id="confirmationNumber" formControlName="confirmationNumber" />
+                <div *ngIf="f['confirmationNumber'].touched && f['confirmationNumber'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['confirmationNumber'].errors f['confirmationNumber'].errors['required']">Confirmation Number is
                         required.</div>
                 </div>
             </div>
+            
 
             <div>
                 <p></p>
@@ -54,28 +55,5 @@
 
         </form>
     </div>
-</Body>
 
 
-<!-- <form [formGroup]="deleteFlightForm">
-    <div> <p></p></div>
-    
-    <div class="form-group">
-        <label for="flightId">Input the id of the row you want to delte</label>
-        <input type="number" class="form-control" id="flightId" formControlName="flightId" />
-        <div *ngIf="f['flightId'].touched && f['flightId'].invalid" class="alert alert-danger">
-            <div *ngIf="f['flightId'].errors f['flightId'].errors['required']">Flight id is required.</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="flightNumber">Input the flight number of the row you want to delete</label>
-        <input type="text" class="form-control" id="flightNumber" formControlName="flightNumber" />
-        <div *ngIf="f['flightNumber'].touched && f['flightNumber'].invalid" class="alert alert-danger">
-            <div *ngIf="f['flightNumber'].errors f['flightNumber'].errors['flightNumber']">Flight number is required.</div>
-        </div>
-    </div>
-
-    <div> <p></p></div>
-    <button (click)="delete(f['flightId'].value)">Delete Row</button> 
-
-</form> -->

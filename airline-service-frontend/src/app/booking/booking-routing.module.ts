@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { CreateComponent } from './create/create.component';
 import { ViewComponent } from './view/view.component';
-// import { DeleteComponent } from './delete/delete.component';
+import { DeleteComponent } from './delete/delete.component';
 // import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'booking/index', component: IndexComponent},
   {path: 'booking/create', component: CreateComponent},
   {path: 'booking/view', component: ViewComponent},
-  // {path: 'booking/delete', component: DeleteComponent},
+  {path: 'booking/delete', component: DeleteComponent},
   // {path: 'booking/update', component: UpdateComponent}
   {path: 'booking/view', component: ViewComponent},
 

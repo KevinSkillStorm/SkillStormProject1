@@ -31,6 +31,16 @@ export class FlightService {
     return this.http.get<Flight>(url, this.httpOptions);  
   }
 
+  getMultipleFlight(id: number): Observable<Flight[]> {
+    let url = `${this.flightURL}/${id}`;
+    return this.http.get<Flight[]>(url, this.httpOptions);  
+  }
+
+  getFlightFromBooking(id: number): Observable<Flight[]> {
+    let url = `${this.flightURL}/${id}`;
+    return this.http.get<Flight[]>(url, this.httpOptions);  
+  }
+
   // Not sending back connection, so either void or Observable<Flight>
   createFlight(flightDTO: FlightDTO): Observable<Flight> {
     return this.http.post<Flight>(this.flightURL, flightDTO);

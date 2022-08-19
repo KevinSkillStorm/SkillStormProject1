@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgForOf } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { IndexComponent } from './index/index.component';
@@ -10,6 +10,9 @@ import { CreateComponent } from './create/create.component';
 import { DeleteComponent } from './delete/delete.component';
 import { DetailComponent } from './detail/detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PassengerRoutingModule } from '../passenger/passenger-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 
 @NgModule({
@@ -18,13 +21,19 @@ import { HttpClientModule } from '@angular/common/http';
     CreateComponent,
     DeleteComponent,
     DetailComponent,
+    
+    
   ],
   imports: [
     CommonModule,
+    BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    PassengerRoutingModule,
     BookingRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgForOf,
+    
   ]
 })
 export class BookingModule { }

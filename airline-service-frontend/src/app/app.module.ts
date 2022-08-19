@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { FlightModule } from './flight/flight.module';
 import { PassengerModule } from './passenger/passenger.module';
 import { BookingModule } from './booking/booking.module';
+import { CommonModule } from '@angular/common';
+import { NgForOf } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { BookingModule } from './booking/booking.module';
     FlightModule,
     PassengerModule,
     BookingModule,
+    CommonModule,
+    NgForOf,
   ],
   providers: [],
   bootstrap: [AppComponent]
